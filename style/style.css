@@ -1,0 +1,27 @@
+ul.menu{
+    display: inline;
+}
+ul.menu li{
+    margin-right: 3px;
+    padding: 4px;
+    background:rgb(216, 213, 213);
+    display: inline-block;
+    border: 1px inset darkgray;
+}
+ul.menu li:hover{
+    cursor: pointer;
+    border: 1px outset darkgray;
+    -webkit-transform: scale(1.1); /* Для Safari и Chrome */
+    -moz-transform: scale(1.1); /* Для Firefox */
+    -o-transform: scale(1.1); /* Для Opera */
+    -ms-transform: scale(1.1); /* Для IE */
+    transform: scale(1.1); /* CSS3 */
+}
+tbody th{
+    background:rgb(138, 134, 134); /* Цвет фона при наведении */
+}
+tbody tr:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background:rgb(216, 213, 213); /* Цвет фона при наведении */
+}

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link href="style/style.css" rel="stylesheet" type='text/css'>
+    </head>
+    <body>
+        <h1>Розклад уроків на тиждень</h1>
+        <div id="dayMenu">
+            <ul class="menu">
+                <li class="menu" onclick="chDay(1)">Понеділок</li>
+                <li class="menu" onclick="chDay(2)">Вівторок</li>
+                <li class="menu" onclick="chDay(3)">Середа</li>
+                <li class="menu" onclick="chDay(4)">Четвер</li>
+                <li class="menu" onclick="chDay(5)">Пятниця</li>
+                <li class="menu" onclick="chDay(6)">Субота</li>
+                <li class="menu" onclick="chDay(7)">Неділя</li>
+            </ul>
+        </div>
+        <div id="lesson">
+            <h2><span id="curentDay"></span></h2>
+            <table>
+                <tr>
+                    <th>№</th><th>Время урока</th><th>Предмет</th>
+                </tr>
+                <tr>
+                    <td>1</td><td>8:15-8:55</td><td><span id="lesson1"></span></td>
+                </tr>
+                <tr>
+                    <td>2</td><td>9:10-9:50</td><td><span id="lesson2"></span></td>
+                </tr>
+                <tr>
+                    <td>3</td><td>10:10-10:50</td><td><span id="lesson3"></span></td>
+                </tr>
+                <tr>
+                    <td>4</td><td>11:10-11:50</td><td><span id="lesson4"></span></td>
+                </tr>
+                <tr>
+                    <td>5</td><td>12:10-12:50</td><td><span id="lesson5"></span></td>
+                </tr>
+                <tr>
+                    <td>6</td><td>--:-----:--</td><td><span id="lesson6"></span></td>
+                </tr>
+            </table>
+        </div>
+        <script src="js/script.js"></script>        
+        <script>
+                var nowDay = new Date();
+                cDay = nowDay.getDay()+1;
+                if (cDay>5) cDay = 1;
+                chDay(cDay);
+                console.log(cDay);
+        </script>
+    </body>
+</html>
